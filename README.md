@@ -4,7 +4,7 @@ Install and configure dns on your system.
 
 |GitHub|GitLab|Quality|Downloads|Version|
 |------|------|-------|---------|-------|
-|[![github](https://github.com/buluma/ansible-role-dns/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-dns/actions)|soon|[![quality](https://img.shields.io/ansible/quality/57825)](https://galaxy.ansible.com/buluma/dns)|![Ansible Role](https://img.shields.io/ansible/role/d/57825)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-dns.svg)](https://github.com/buluma/ansible-role-dns/releases/)|
+|[![github](https://github.com/buluma/ansible-role-dns/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-dns/actions)|[![pipeline status](https://gitlab.com/buluma/ansible-role-dns/badges/main/pipeline.svg)](https://gitlab.com/buluma/ansible-role-dns/-/commits/main)|[![quality](https://img.shields.io/ansible/quality/57825)](https://galaxy.ansible.com/buluma/dns)|![Ansible Role](https://img.shields.io/ansible/role/d/57825)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-dns.svg)](https://github.com/buluma/ansible-role-dns/releases/)|
 
 ## [Example Playbook](#example-playbook)
 
