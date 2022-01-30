@@ -1,4 +1,4 @@
-# [dns](#dns) ![Ansible Quality Score](https://img.shields.io/ansible/quality/57825)
+# [dns](#dns)
 
 Install and configure dns on your system.
 
