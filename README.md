@@ -4,7 +4,7 @@ Install and configure dns on your system.
 
 |GitHub|GitLab|Quality|Downloads|Version|
 |------|------|-------|---------|-------|
-|[![github](https://github.com/buluma/ansible-role-dns/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-dns/actions)|[![gitlab](https://gitlab.com/buluma/ansible-role-dns/badges/master/pipeline.svg)](https://gitlab.com/buluma/ansible-role-dns)|[![quality](https://img.shields.io/ansible/quality/21885)](https://galaxy.ansible.com/buluma/dns)|[![downloads](https://img.shields.io/ansible/role/d/21885)](https://galaxy.ansible.com/buluma/dns)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-dns.svg)](https://github.com/buluma/ansible-role-dns/releases/)|
+|[![github](https://github.com/buluma/ansible-role-dns/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-dns/actions)|[![gitlab](https://gitlab.com/buluma/ansible-role-dns/badges/master/pipeline.svg)](https://gitlab.com/buluma/ansible-role-dns)|[![quality](https://img.shields.io/ansible/quality/)](https://galaxy.ansible.com/buluma/dns)|[![downloads](https://img.shields.io/ansible/role/d/)](https://galaxy.ansible.com/buluma/dns)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-dns.svg)](https://github.com/buluma/ansible-role-dns/releases/)|
 
 ## [Example Playbook](#example-playbook)
 
@@ -33,6 +33,7 @@ The machine needs to be prepared. In CI this is done using `molecule/default/pre
     - role: buluma.bootstrap
     - role: robertdebock.core_dependencies
 ```
+
 
 ## [Role Variables](#role-variables)
 
@@ -198,9 +199,11 @@ The following roles are used to prepare a system. You can prepare your system in
 | Requirement | GitHub | GitLab |
 |-------------|--------|--------|
 |[buluma.bootstrap](https://galaxy.ansible.com/buluma/bootstrap)|[![Build Status GitHub](https://github.com/buluma/ansible-role-bootstrap/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-bootstrap/actions)|[![Build Status GitLab ](https://gitlab.com/buluma/ansible-role-bootstrap/badges/master/pipeline.svg)](https://gitlab.com/buluma/ansible-role-bootstrap)|
-|[robertdebock.core_dependencies](https://galaxy.ansible.com/robertdebock/core_dependencies)|[![Build Status GitHub](https://github.com/robertdebock/ansible-role-core_dependencies/workflows/Ansible%20Molecule/badge.svg)](https://github.com/robertdebock/ansible-role-core_dependencies/actions)|[![Build Status GitLab ](https://gitlab.com/robertdebock/ansible-role-core_dependencies/badges/master/pipeline.svg)](https://gitlab.com/robertdebock/ansible-role-core_dependencies)|
+|[robertdebock.core_dependencies](https://galaxy.ansible.com/buluma/robertdebock.core_dependencies)|[![Build Status GitHub](https://github.com/buluma/robertdebock.core_dependencies/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/robertdebock.core_dependencies/actions)|[![Build Status GitLab ](https://gitlab.com/buluma/robertdebock.core_dependencies/badges/master/pipeline.svg)](https://gitlab.com/buluma/robertdebock.core_dependencies)|
 
 ## [Context](#context)
+
+This role is a part of many compatible roles. Have a look at [the documentation of these roles](https://buluma.nl/) for further information.
 
 Here is an overview of related roles:
 ![dependencies](https://raw.githubusercontent.com/buluma/ansible-role-dns/png/requirements.png "Dependencies")
@@ -242,6 +245,4 @@ Apache-2.0
 
 ## [Author Information](#author-information)
 
-[Michael Buluma](https://buluma.co.ke)
-
-Please consider [sponsoring me](https://github.com/sponsors/buluma).
+[Michael Buluma](https://buluma.co.ke/)
