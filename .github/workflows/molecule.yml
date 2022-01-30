@@ -33,14 +33,10 @@ jobs:
       fail-fast: false
       matrix:
         config:
-          - image: "alpine"
-            tag: "latest"
           - image: "amazonlinux"
             tag: "latest"
-          - image: "enterpriselinux"
-            tag: "latest"
           - image: "debian"
-            tag: "latest"
+            tag: "bullseye"
           - image: "debian"
             tag: "bookworm"
           - image: "fedora"
