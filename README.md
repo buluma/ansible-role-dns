@@ -1,10 +1,10 @@
-# [dns](#dns)
+# [dns](#dns) ![Ansible Quality Score](https://img.shields.io/ansible/quality/57825)
 
 Install and configure dns on your system.
 
 |GitHub|GitLab|Quality|Downloads|Version|
 |------|------|-------|---------|-------|
-|[![github](https://github.com/buluma/ansible-role-dns/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-dns/actions)|[![gitlab](https://gitlab.com/buluma/ansible-role-dns/badges/master/pipeline.svg)](https://gitlab.com/buluma/ansible-role-dns)|[![quality](https://img.shields.io/ansible/quality/)](https://galaxy.ansible.com/buluma/dns)|[![downloads](https://img.shields.io/ansible/role/d/)](https://galaxy.ansible.com/buluma/dns)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-dns.svg)](https://github.com/buluma/ansible-role-dns/releases/)|
+|[![github](https://github.com/buluma/ansible-role-dns/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-dns/actions)|soon|[![quality](https://img.shields.io/ansible/quality/57825)](https://galaxy.ansible.com/buluma/dns)|![Ansible Role](https://img.shields.io/ansible/role/d/57825)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-dns.svg)](https://github.com/buluma/ansible-role-dns/releases/)|
 
 ## [Example Playbook](#example-playbook)
 
