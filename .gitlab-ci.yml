@@ -22,20 +22,14 @@ build:
     matrix:
       - image: "ubuntu"
         tag: "bionic"
-      - image: "fedora"
-        tag: "34"
-      - image: "fedora"
-        tag: "latest"
-      - image: "fedora"
-        tag: "rawhide"
 
-unit_tests:
+role_tests:
   stage: test
   script: echo "running role tests..."
 
 galaxy:
   script:
-    - ansible-galaxy role info ${CI_PROJECT_NAMESPACE} ${CI_PROJECT_NAME}
+    - ansible-galaxy role info ${CI_PROJECT_NAMESPACE}.${CI_PROJECT_NAME}
 
 # integration_tests:
 #   stage: test
