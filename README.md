@@ -31,7 +31,7 @@ The machine needs to be prepared. In CI this is done using `molecule/default/pre
 
   roles:
     - role: buluma.bootstrap
-    - role: robertdebock.core_dependencies
+    - role: buluma.core_dependencies
 ```
 
 
@@ -198,8 +198,8 @@ The following roles are used to prepare a system. You can prepare your system in
 
 | Requirement | GitHub | GitLab |
 |-------------|--------|--------|
-|[buluma.bootstrap](https://galaxy.ansible.com/buluma/bootstrap)|[![Build Status GitHub](https://github.com/buluma/ansible-role-bootstrap/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-bootstrap/actions)|[![Build Status GitLab ](https://gitlab.com/buluma/ansible-role-bootstrap/badges/master/pipeline.svg)](https://gitlab.com/buluma/ansible-role-bootstrap)|
-|[robertdebock.core_dependencies](https://galaxy.ansible.com/buluma/robertdebock.core_dependencies)|[![Build Status GitHub](https://github.com/buluma/robertdebock.core_dependencies/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/robertdebock.core_dependencies/actions)|[![Build Status GitLab ](https://gitlab.com/buluma/robertdebock.core_dependencies/badges/master/pipeline.svg)](https://gitlab.com/buluma/robertdebock.core_dependencies)|
+|[buluma.bootstrap](https://galaxy.ansible.com/buluma/bootstrap)|[![Build Status GitHub](https://github.com/buluma/ansible-role-bootstrap/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-bootstrap/actions)|[![Build Status GitLab ](https://gitlab.com/buluma/ansible-role-bootstrap/badges/main/pipeline.svg)](https://gitlab.com/buluma/ansible-role-bootstrap)|
+|[buluma.core_dependencies](https://galaxy.ansible.com/buluma/buluma.core_dependencies)|[![Build Status GitHub](https://github.com/buluma/buluma.core_dependencies/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-core_dependencies/actions)|[![Build Status GitLab ](https://gitlab.com/buluma/buluma.ansible-role-core_dependencies/badges/main/pipeline.svg)](https://gitlab.com/buluma/buluma.ansible-role-core_dependencies)|
 
 ## [Context](#context)
 
