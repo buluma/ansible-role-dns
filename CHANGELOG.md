@@ -1,5 +1,13 @@
 # Changelog
 
+## [Unreleased](https://github.com/buluma/ansible-role-dns/tree/HEAD)
+
+[Full Changelog](https://github.com/buluma/ansible-role-dns/compare/1.0.8...HEAD)
+
+**Merged pull requests:**
+
+- Bump buluma/gh-action-auto-merge-dependabot-updates from 1.0.4 to 1.0.5 [\#5](https://github.com/buluma/ansible-role-dns/pull/5) ([dependabot[bot]](https://github.com/apps/dependabot))
+
 ## [1.0.8](https://github.com/buluma/ansible-role-dns/tree/1.0.8) (2022-03-28)
 
 [Full Changelog](https://github.com/buluma/ansible-role-dns/compare/1.0.7...1.0.8)
