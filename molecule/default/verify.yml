@@ -20,7 +20,7 @@
         name: "{{ nslookup_package }}"
         state: present
       notify:
-        - uninstall nslookup
+        - Uninstall nslookup
 
     - name: Test resolving www.example.com
       ansible.builtin.command:
