@@ -1,5 +1,9 @@
 # Changelog
 
+## [2.0.0](https://github.com/buluma/ansible-role-dns/tree/2.0.0) (2022-09-18)
+
+[Full Changelog](https://github.com/buluma/ansible-role-dns/compare/1.0.10...2.0.0)
+
 ## [1.0.10](https://github.com/buluma/ansible-role-dns/tree/1.0.10) (2022-07-15)
 
 [Full Changelog](https://github.com/buluma/ansible-role-dns/compare/1.0.9...1.0.10)
