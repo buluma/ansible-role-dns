@@ -2,9 +2,9 @@
 
 Install and configure dns on your system.
 
-|GitHub|GitLab|Quality|Downloads|Version|Issues|Pull Requests|
-|------|------|-------|---------|-------|------|-------------|
-|[![github](https://github.com/buluma/ansible-role-dns/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-dns/actions)|[![gitlab](https://gitlab.com/shadowwalker/ansible-role-dns/badges/master/pipeline.svg)](https://gitlab.com/shadowwalker/ansible-role-dns)|[![quality](https://img.shields.io/ansible/quality/57825)](https://galaxy.ansible.com/buluma/dns)|[![downloads](https://img.shields.io/ansible/role/d/57825)](https://galaxy.ansible.com/buluma/dns)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-dns.svg)](https://github.com/buluma/ansible-role-dns/releases/)|[![Issues](https://img.shields.io/github/issues/buluma/ansible-role-dns.svg)](https://github.com/buluma/ansible-role-dns/issues/)|[![PullRequests](https://img.shields.io/github/issues-pr-closed-raw/buluma/ansible-role-dns.svg)](https://github.com/buluma/ansible-role-dns/pulls/)|
+|GitHub|GitLab|Downloads|Version|Issues|Pull Requests|
+|------|------|-------|-------|------|-------------|
+|[![github](https://github.com/buluma/ansible-role-dns/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-dns/actions)|[![gitlab](https://gitlab.com/shadowwalker/ansible-role-dns/badges/master/pipeline.svg)](https://gitlab.com/shadowwalker/ansible-role-dns)|[![downloads](https://img.shields.io/ansible/role/d/4686)](https://galaxy.ansible.com/buluma/dns)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-dns.svg)](https://github.com/buluma/ansible-role-dns/releases/)|[![Issues](https://img.shields.io/github/issues/buluma/ansible-role-dns.svg)](https://github.com/buluma/ansible-role-dns/issues/)|[![PullRequests](https://img.shields.io/github/issues-pr-closed-raw/buluma/ansible-role-dns.svg)](https://github.com/buluma/ansible-role-dns/pulls/)|
 
 ## [Example Playbook](#example-playbook)
 
@@ -226,7 +226,7 @@ This role has been tested on these [container images](https://hub.docker.com/u/b
 |[Fedora](https://hub.docker.com/repository/docker/buluma/fedora/general)|all|
 |[Ubuntu](https://hub.docker.com/repository/docker/buluma/ubuntu/general)|all|
 
-The minimum version of Ansible required is 2.10, tests have been done to:
+The minimum version of Ansible required is 2.12, tests have been done to:
 
 - The previous version.
 - The current version.
