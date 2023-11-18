@@ -1,5 +1,14 @@
 # Changelog
 
+## [Unreleased](https://github.com/buluma/ansible-role-dns/tree/HEAD)
+
+[Full Changelog](https://github.com/buluma/ansible-role-dns/compare/2.0.0...HEAD)
+
+**Closed issues:**
+
+- Update buluma/todo-to-issue-action@v1.0.1 @buluma [\#12](https://github.com/buluma/ansible-role-dns/issues/12)
+- Update action [\#11](https://github.com/buluma/ansible-role-dns/issues/11)
+
 ## [2.0.0](https://github.com/buluma/ansible-role-dns/tree/2.0.0) (2022-09-18)
 
 [Full Changelog](https://github.com/buluma/ansible-role-dns/compare/1.0.10...2.0.0)
