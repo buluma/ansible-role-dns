@@ -2,11 +2,11 @@
 $ORIGIN {{ item.name }}.
 $TTL {{ item.ttl|default('86400') }}
 @	IN	SOA	{{ item.soa|default('localhost') }}.	hostmaster.{{ item.name }}. (
-			{{ item.serial|default('1') }} ; serial
-			{{ item.refresh|default('604800') }} ; refresh
-			{{ item.retry|default('86400') }} ; retry
-			{{ item.expire|default('2419200') }} ; expire
-			{{ item.ttl|default('604800') }} ) ; minimum TTL
+                        {{ item.serial|default('1') }} ; serial
+                        {{ item.refresh|default('604800') }} ; refresh
+                        {{ item.retry|default('86400') }} ; retry
+                        {{ item.expire|default('2419200') }} ; expire
+                        {{ item.ttl|default('604800') }} ) ; minimum TTL
 
 {% if item.ns is defined %}
 {% for record in item.ns %}
@@ -17,6 +17,24 @@ $TTL {{ item.ttl|default('86400') }}
 {% if item.mx is defined %}
 {% for record in item.mx %}
   IN MX {{ record.priority|default('10') }} {{ record.name }}
+{% endfor %}
+{% endif %}
+
+{% if item.srv is defined %}
+{% for record in item.srv %}
+{{ record.name }}	{{ record.ttl|default('3600') }}	IN	SRV	{{ record.priority|default('0') }} {{ record.weight|default('100') }} {{ record.port|default('88') }} {{ record.value }}
+{% endfor %}
+{% endif %}
+
+{% if item.txt is defined %}
+{% for record in item.txt %}
+{{ record.name }}	{{ record.ttl|default('3600') }}	IN	TXT	"{{ record.value }}"
+{% endfor %}
+{% endif %}
+
+{% if item.uri is defined %}
+{% for record in item.uri %}
+{{ record.name }}	{{ record.ttl|default('3600') }}	IN URI	{{ record.priority|default('0') }} {{ record.weight|default('100') }}  "{{ record.value }}"
 {% endfor %}
 {% endif %}
 
