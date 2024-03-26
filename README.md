@@ -14,8 +14,8 @@ This example is taken from [`molecule/default/converge.yml`](https://github.com/
 ---
 - name: Converge
   hosts: all
-  become: yes
-  gather_facts: yes
+  become: true
+  gather_facts: true
 
   roles:
     - role: buluma.dns
@@ -28,8 +28,8 @@ The machine needs to be prepared. In CI this is done using [`molecule/default/pr
 ---
 - name: Prepare
   hosts: all
-  gather_facts: no
-  become: yes
+  gather_facts: false
+  become: true
 
   roles:
     - role: buluma.bootstrap
@@ -50,7 +50,7 @@ The default values for the variables are set in [`defaults/main.yml`](https://gi
 dns_port: 53
 
 # Should the DNS server be a caching DNS server?
-dns_caching_dns: yes
+dns_caching_dns: true
 
 # A list of zones and properties per zone.
 dns_zones:
