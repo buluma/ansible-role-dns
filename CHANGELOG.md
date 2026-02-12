@@ -7,6 +7,8 @@
 **Closed issues:**
 
 - Update buluma/todo-to-issue-action@v1.0.1 @buluma [\#16](https://github.com/buluma/ansible-role-dns/issues/16)
+- Update action [\#15](https://github.com/buluma/ansible-role-dns/issues/15)
+- rebuild action [\#14](https://github.com/buluma/ansible-role-dns/issues/14)
 - Update buluma/todo-to-issue-action@v1.0.1 @buluma [\#12](https://github.com/buluma/ansible-role-dns/issues/12)
 - Update action [\#11](https://github.com/buluma/ansible-role-dns/issues/11)
 
