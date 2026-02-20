@@ -73,6 +73,72 @@ dns_zones:
         value: "127.0.0.1"
       - name: mail2
         value: "127.0.0.1"
+      - name: ldap1
+        value: "127.0.0.1"
+    srv:
+      - name: _kerberos-master._tcp.example.com.
+        ttl: 3600
+        priority: 0
+        weight: 100
+        port: 88
+        value: ldap1.example.com.
+      - name: _kerberos-master._udp.example.com.
+        ttl: 3600
+        priority: 0
+        weight: 100
+        port: 88
+        value: ldap1.example.com
+      - name: _kerberos._tcp.example.com.
+        ttl: 3600
+        priority: 0
+        weight: 100
+        port: 88
+        value: ldap1.example.com
+      - name: _kerberos._udp.example.com.
+        ttl: 3600
+        priority: 0
+        weight: 100
+        port: 88
+        value: ldap1.example.com
+      - name: _kpasswd._tcp.example.com.
+        ttl: 3600
+        priority: 0
+        weight: 100
+        port: 464
+        value: ldap1.example.com
+      - name: _kpasswd._udp.example.com.
+        ttl: 3600
+        priority: 0
+        weight: 100
+        port: 464
+        value: ldap1.example.com
+      - name: _ldap._tcp.example.com.
+        ttl: 3600
+        priority: 0
+        weight: 100
+        port: 389
+        value: ldap1.example.com
+    txt:
+      - name: _kerberos.example.com.
+        ttl: 3600
+        value: "EXAMPLE.COM"
+    uri:
+      - name: _kerberos.example.com.
+        priority: 0
+        weight: 100
+        value: "krb5srv:m:tcp:ldap1.example.com."
+      - name: _kerberos.example.com.
+        priority: 0
+        weight: 100
+        value: "krb5srv:m:udp:ldap1.example.com."
+      - name: _kpasswd.example.com.
+        priority: 0
+        weight: 100
+        value: "krb5srv:m:tcp:ldap1.example.com."
+      - name: _kpasswd.example.com.
+        priority: 0
+        weight: 100
+        value: "krb5srv:m:udp:ldap1.example.com."
 
   - name: forwarded.example.com
     type: forward
@@ -145,3 +211,22 @@ dns_pid_file: /run/named/named.pid
 #     dns_zone_forwarders:
 #       - "9.9.9.9"
 #       - "8.8.8.8"
+
+# secondary configuration example:
+#
+# on the main dns server:
+# 
+# dns_options_allow_transfer:
+#   - "192.168.0.100"
+#
+# on the secondary dns server:
+#
+# dns_zones:
+#   - name: "example.com"
+#     type: slave
+#     zone_masters:
+#       - 192.168.0.53
+#   - name: "lab.controlplane.info"
+#     type: slave
+#     zone_masters:
+#       - 192.168.0.53
