@@ -1,5 +1,4 @@
 ---
-
 - name: assert | Test if dns_port is set correctly
   ansible.builtin.assert:
     that:
@@ -73,8 +72,7 @@
 - name: assert | Test if item in dns_options_listen_on is set correctly for strings
   ansible.builtin.assert:
     that:
-      - item in [ "any", "none" ] or
-        item is match('^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$')
+      - item in [ "any", "none" ] or item is match('^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$')
     quiet: true
   loop: "{{ dns_options_listen_on }}"
   loop_control:
