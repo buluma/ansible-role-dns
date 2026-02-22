@@ -1,9 +1,7 @@
----
-- name: Converge
-  hosts: all
-  become: true
+- become: true
   gather_facts: true
-
+  hosts: all
+  name: Converge
   roles:
-    - role: buluma.dns
-      dns_port: 5353
+  - dns_port: 5353
+    role: buluma.dns
