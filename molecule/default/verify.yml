@@ -1,28 +1,29 @@
-- become: true
-  gather_facts: true
-  handlers:
-  - ansible.builtin.package:
-      name: '{{ nslookup_package }}'
-      state: absent
-    name: Uninstall nslookup
-  hosts: all
-  name: Verify
-  tasks:
-  - ansible.builtin.package:
-      name: '{{ nslookup_package }}'
-      state: present
-    name: Install nslookup
-    notify:
-    - Uninstall nslookup
-  - ansible.builtin.command:
-      cmd: nslookup -port=5353 www.example.com 127.0.0.1
-    changed_when: false
-    name: Test resolving www.example.com
-  vars:
-    _nslookup_package:
-      Alpine: bind-tools
-      Archlinux: dnsutils
-      Debian: dnsutils
-      RedHat: bind-utils
-      Rocky: bind-utils
-    nslookup_package: '{{ _nslookup_package[ansible_os_family] }}'
+---
+  - become: true
+    gather_facts: true
+    handlers:
+      - ansible.builtin.package:
+          name: '{{ nslookup_package }}'
+          state: absent
+        name: Uninstall nslookup
+    hosts: all
+    name: Verify
+    tasks:
+      - ansible.builtin.package:
+          name: '{{ nslookup_package }}'
+          state: present
+        name: Install nslookup
+        notify:
+          - Uninstall nslookup
+      - ansible.builtin.command:
+          cmd: nslookup -port=5353 www.example.com 127.0.0.1
+        changed_when: false
+        name: Test resolving www.example.com
+    vars:
+      _nslookup_package:
+        Alpine: bind-tools
+        Archlinux: dnsutils
+        Debian: dnsutils
+        RedHat: bind-utils
+        Rocky: bind-utils
+      nslookup_package: '{{ _nslookup_package[ansible_os_family] }}'
