@@ -12,26 +12,26 @@ This example is taken from [`molecule/default/converge.yml`](https://github.com/
 
 ```yaml
 ---
-  - become: true
-    gather_facts: true
-    hosts: all
-    name: Converge
-    roles:
-      - dns_port: 5353
-        role: buluma.dns
+- become: true
+  gather_facts: true
+  hosts: all
+  name: Converge
+  roles:
+  - dns_port: 5353
+    role: buluma.dns
 ```
 
 The machine needs to be prepared. In CI this is done using [`molecule/default/prepare.yml`](https://github.com/buluma/ansible-role-dns/blob/master/molecule/default/prepare.yml):
 
 ```yaml
 ---
-  - become: true
-    gather_facts: false
-    hosts: all
-    name: Prepare
-    roles:
-      - role: buluma.bootstrap
-      - role: buluma.core_dependencies
+- become: true
+  gather_facts: false
+  hosts: all
+  name: Prepare
+  roles:
+  - role: buluma.bootstrap
+  - role: buluma.core_dependencies
 ```
 
 Also see a [full explanation and example](https://buluma.github.io/how-to-use-these-roles.html) on how to use these roles.
@@ -43,80 +43,80 @@ The default values for the variables are set in [`defaults/main.yml`](https://gi
 ```yaml
 ---
 dns_allow_recursion:
-  - none
+- none
 dns_caching_dns: true
 dns_options_listen_on:
-  - any
+- any
 dns_options_listen_on_v6:
-  - any
+- any
 dns_pid_file: /run/named/named.pid
 dns_port: 53
 dns_zones:
-  - expire: 2419200
-    name: localhost
-    records:
-      - name: "@"
-        type: NS
-        value: localhost.
-      - name: "@"
-        value: 127.0.0.1
-      - name: "@"
-        type: AAAA
-        value: ::1
-    refresh: 604800
-    retry: 86400
-    serial: 1
-    soa: localhost
-    ttl: 604800
-  - name: 127.in-addr.arpa
-    records:
-      - name: "@"
-        type: NS
-        value: localhost.
-      - name: 1.0.0
-        type: PTR
-        value: localhost.
-    ttl: 604800
-  - name: 0.in-addr.arpa
-    records:
-      - name: "@"
-        type: NS
-        value: localhost.
-  - name: 255.in-addr.arpa
-    records:
-      - name: "@"
-        type: NS
-        value: localhost.
-  - mx:
-      - name: mail1.example.com.
-        priority: 10
-      - name: mail2.example.com.
-        priority: 20
-    name: example.com
-    ns:
-      - name: dns1.example.com.
-      - name: dns2.example.com.
-    records:
-      - name: dns1
-        value: 127.0.0.1
-      - name: dns2
-        value: 127.0.0.1
-      - name: www
-        value: 127.0.0.1
-      - name: dns1
-        value: 127.0.0.1
-      - name: dns2
-        value: 127.0.0.1
-      - name: mail1
-        value: 127.0.0.1
-      - name: mail2
-        value: 127.0.0.1
-    ttl: 604800
-  - dns_zone_forwarders:
-      - 1.1.1.1
-      - 8.8.8.8
-    name: forwarded.example.com
-    type: forward
+- expire: 2419200
+  name: localhost
+  records:
+  - name: "@"
+    type: NS
+    value: localhost.
+  - name: "@"
+    value: 127.0.0.1
+  - name: "@"
+    type: AAAA
+    value: ::1
+  refresh: 604800
+  retry: 86400
+  serial: 1
+  soa: localhost
+  ttl: 604800
+- name: 127.in-addr.arpa
+  records:
+  - name: "@"
+    type: NS
+    value: localhost.
+  - name: 1.0.0
+    type: PTR
+    value: localhost.
+  ttl: 604800
+- name: 0.in-addr.arpa
+  records:
+  - name: "@"
+    type: NS
+    value: localhost.
+- name: 255.in-addr.arpa
+  records:
+  - name: "@"
+    type: NS
+    value: localhost.
+- mx:
+  - name: mail1.example.com.
+    priority: 10
+  - name: mail2.example.com.
+    priority: 20
+  name: example.com
+  ns:
+  - name: dns1.example.com.
+  - name: dns2.example.com.
+  records:
+  - name: dns1
+    value: 127.0.0.1
+  - name: dns2
+    value: 127.0.0.1
+  - name: www
+    value: 127.0.0.1
+  - name: dns1
+    value: 127.0.0.1
+  - name: dns2
+    value: 127.0.0.1
+  - name: mail1
+    value: 127.0.0.1
+  - name: mail2
+    value: 127.0.0.1
+  ttl: 604800
+- dns_zone_forwarders:
+  - 1.1.1.1
+  - 8.8.8.8
+  name: forwarded.example.com
+  type: forward
 ```
 
 ## [Requirements](#requirements)
