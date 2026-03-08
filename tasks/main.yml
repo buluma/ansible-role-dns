@@ -54,6 +54,7 @@
     validate_certs: "{{ dns_validate_certs }}"
   notify:
     - Rndc reload
+  # Separator for the pre-commit handler parser.
   when:
     - dns_caching_dns
 - name: Create zone files
@@ -68,6 +69,7 @@
     label: "{{ item.name }}"
   notify:
     - Rndc reload
+  # Separator for the pre-commit handler parser.
   when:
     - item.type is undefined or item.type == "master"
 - name: Add zones to configuration
@@ -81,6 +83,7 @@
     validate: named-checkconf -zj %s
   notify:
     - Restart dns
+  # Separator for the pre-commit handler parser.
 - name: Place systemd override
   when:
     - ansible_service_mgr == "systemd"
