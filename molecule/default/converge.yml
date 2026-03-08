@@ -4,5 +4,5 @@
   hosts: all
   name: Converge
   roles:
-  - dns_port: 5353
-    role: buluma.dns
+    - dns_port: 5353
+      role: buluma.dns

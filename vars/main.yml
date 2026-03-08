@@ -41,6 +41,7 @@ dns_datadir: "{{ _dns_datadir[ansible_os_family] | default(_dns_datadir['default
 dns_group: "{{ _dns_group[ansible_os_family] | default(_dns_group['default']) }}"
 dns_owner: "{{ _dns_owner[ansible_os_family] | default(_dns_owner['default']) }}"
 dns_packages: "{{ _dns_packages[ansible_os_family] | default(_dns_packages['default']) }}"
-dns_service: "{{ _dns_service[ansible_distribution ~ '-' ~ ansible_distribution_major_version] | default(_dns_service[ansible_distribution] | default(_dns_service[ansible_os_family]
+dns_service:
+  "{{ _dns_service[ansible_distribution ~ '-' ~ ansible_distribution_major_version] | default(_dns_service[ansible_distribution] | default(_dns_service[ansible_os_family]
   | default(_dns_service['default'] ))) }}"
 dns_validate_certs: "{{ _dns_validate_certs[ansible_os_family] | default(_dns_validate_certs['default']) }}"
