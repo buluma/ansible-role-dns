@@ -26,4 +26,4 @@
       Debian: dnsutils
       RedHat: bind-utils
       Rocky: bind-utils
-    nslookup_package: "{{ _nslookup_package[ansible_os_family] }}"
+    nslookup_package: "{{ _nslookup_package[ansible_facts.os_family] }}"
