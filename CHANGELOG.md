@@ -1,8 +1,8 @@
 # Changelog
 
-## [Unreleased](https://github.com/buluma/ansible-role-dns/tree/HEAD)
+## [26.6.0](https://github.com/buluma/ansible-role-dns/tree/26.6.0) (2026-06-14)
 
-[Full Changelog](https://github.com/buluma/ansible-role-dns/compare/2.0.0...HEAD)
+[Full Changelog](https://github.com/buluma/ansible-role-dns/compare/2.0.0...26.6.0)
 
 **Closed issues:**
 
@@ -11,6 +11,12 @@
 - rebuild action [\#14](https://github.com/buluma/ansible-role-dns/issues/14)
 - Update buluma/todo-to-issue-action@v1.0.1 @buluma [\#12](https://github.com/buluma/ansible-role-dns/issues/12)
 - Update action [\#11](https://github.com/buluma/ansible-role-dns/issues/11)
+
+**Merged pull requests:**
+
+- Bump ansible/ansible-lint from 26.2.0 to 26.3.0 [\#21](https://github.com/buluma/ansible-role-dns/pull/21) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump ansible/ansible-lint from 26.1.1 to 26.2.0 [\#19](https://github.com/buluma/ansible-role-dns/pull/19) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump actions/checkout from 4 to 6 [\#18](https://github.com/buluma/ansible-role-dns/pull/18) ([dependabot[bot]](https://github.com/apps/dependabot))
 
 ## [2.0.0](https://github.com/buluma/ansible-role-dns/tree/2.0.0) (2022-09-18)
 
