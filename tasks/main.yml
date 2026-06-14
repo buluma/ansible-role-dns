@@ -86,7 +86,7 @@
   # Separator for the pre-commit handler parser.
 - name: Place systemd override
   when:
-    - ansible_facts.service_mgr == "systemd"
+    - ansible_facts['service_mgr'] == "systemd"
   block:
     - name: Create service.d {{ dns_service }}
       ansible.builtin.file:
