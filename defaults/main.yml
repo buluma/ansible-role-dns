@@ -87,37 +87,37 @@ dns_zones:
         priority: 0
         weight: 100
         port: 88
-        value: ldap1.example.com
+        value: ldap1.example.com.
       - name: _kerberos._tcp.example.com.
         ttl: 3600
         priority: 0
         weight: 100
         port: 88
-        value: ldap1.example.com
+        value: ldap1.example.com.
       - name: _kerberos._udp.example.com.
         ttl: 3600
         priority: 0
         weight: 100
         port: 88
-        value: ldap1.example.com
+        value: ldap1.example.com.
       - name: _kpasswd._tcp.example.com.
         ttl: 3600
         priority: 0
         weight: 100
         port: 464
-        value: ldap1.example.com
+        value: ldap1.example.com.
       - name: _kpasswd._udp.example.com.
         ttl: 3600
         priority: 0
         weight: 100
         port: 464
-        value: ldap1.example.com
+        value: ldap1.example.com.
       - name: _ldap._tcp.example.com.
         ttl: 3600
         priority: 0
         weight: 100
         port: 389
-        value: ldap1.example.com
+        value: ldap1.example.com.
     txt:
       - name: _kerberos.example.com.
         ttl: 3600
@@ -223,10 +223,10 @@ dns_pid_file: /run/named/named.pid
 #
 # dns_zones:
 #   - name: "example.com"
-#     type: slave
+#     type: secondary
 #     zone_masters:
 #       - 192.168.0.53
 #   - name: "lab.controlplane.info"
-#     type: slave
+#     type: secondary
 #     zone_masters:
 #       - 192.168.0.53
