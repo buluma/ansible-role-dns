@@ -1,5 +1,17 @@
 # Changelog
 
+## [Unreleased](https://github.com/buluma/ansible-role-dns/tree/HEAD)
+
+[Full Changelog](https://github.com/buluma/ansible-role-dns/compare/26.6.1...HEAD)
+
+**Merged pull requests:**
+
+- add SRV, TXT and URI entries [\#13](https://github.com/buluma/ansible-role-dns/pull/13) ([starfoxx82](https://github.com/starfoxx82))
+
+## [26.6.1](https://github.com/buluma/ansible-role-dns/tree/26.6.1) (2026-06-15)
+
+[Full Changelog](https://github.com/buluma/ansible-role-dns/compare/26.6.0...26.6.1)
+
 ## [26.6.0](https://github.com/buluma/ansible-role-dns/tree/26.6.0) (2026-06-14)
 
 [Full Changelog](https://github.com/buluma/ansible-role-dns/compare/2.0.0...26.6.0)
