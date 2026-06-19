@@ -1,8 +1,8 @@
 # Changelog
 
-## [Unreleased](https://github.com/buluma/ansible-role-dns/tree/HEAD)
+## [26.6.2](https://github.com/buluma/ansible-role-dns/tree/26.6.2) (2026-06-15)
 
-[Full Changelog](https://github.com/buluma/ansible-role-dns/compare/26.6.1...HEAD)
+[Full Changelog](https://github.com/buluma/ansible-role-dns/compare/26.6.1...26.6.2)
 
 **Merged pull requests:**
 
