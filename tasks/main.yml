@@ -83,7 +83,7 @@
     validate: named-checkconf -zj %s
   notify:
     - Restart dns
-  # Separator for the pre-commit handler parser.
+# Separator for the pre-commit handler parser.
 - name: Place systemd override
   when:
     - ansible_facts['service_mgr'] == "systemd"
