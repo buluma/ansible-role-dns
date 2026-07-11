@@ -12,10 +12,10 @@ This example is taken from [`molecule/default/converge.yml`](https://github.com/
 
 ```yaml
 ---
-- become: true
-  gather_facts: true
+- name: Converge
   hosts: all
-  name: Converge
+  become: true
+  gather_facts: true
   roles:
     - dns_port: 5353
       role: buluma.dns
@@ -25,10 +25,18 @@ The machine needs to be prepared. In CI this is done using [`molecule/default/pr
 
 ```yaml
 ---
-- become: true
-  gather_facts: false
+- name: Prepare
   hosts: all
-  name: Prepare
+  become: true
+  gather_facts: false
+
+  pre_tasks:
+    - name: Install sudo if missing
+      ansible.builtin.raw: "{{ ansible_pkg_mgr | default('dnf') }} install -y sudo}"
+      become: false
+      changed_when: false
+      failed_when: false
+
   roles:
     - role: buluma.bootstrap
     - role: buluma.core_dependencies
@@ -111,12 +119,97 @@ dns_zones:
         value: 127.0.0.1
       - name: mail2
         value: 127.0.0.1
+      - name: ldap1
+        value: 127.0.0.1
+    srv:
+      - name: _kerberos-master._tcp.example.com.
+        port: 88
+        priority: 0
+        ttl: 3600
+        value: ldap1.example.com.
+        weight: 100
+      - name: _kerberos-master._udp.example.com.
+        port: 88
+        priority: 0
+        ttl: 3600
+        value: ldap1.example.com.
+        weight: 100
+      - name: _kerberos._tcp.example.com.
+        port: 88
+        priority: 0
+        ttl: 3600
+        value: ldap1.example.com.
+        weight: 100
+      - name: _kerberos._udp.example.com.
+        port: 88
+        priority: 0
+        ttl: 3600
+        value: ldap1.example.com.
+        weight: 100
+      - name: _kpasswd._tcp.example.com.
+        port: 464
+        priority: 0
+        ttl: 3600
+        value: ldap1.example.com.
+        weight: 100
+      - name: _kpasswd._udp.example.com.
+        port: 464
+        priority: 0
+        ttl: 3600
+        value: ldap1.example.com.
+        weight: 100
+      - name: _ldap._tcp.example.com.
+        port: 389
+        priority: 0
+        ttl: 3600
+        value: ldap1.example.com.
+        weight: 100
     ttl: 604800
+    txt:
+      - name: _kerberos.example.com.
+        ttl: 3600
+        value: EXAMPLE.COM
+    uri:
+      - name: _kerberos.example.com.
+        priority: 0
+        value: "krb5srv:m:tcp:ldap1.example.com."
+        weight: 100
+      - name: _kerberos.example.com.
+        priority: 0
+        value: "krb5srv:m:udp:ldap1.example.com."
+        weight: 100
+      - name: _kpasswd.example.com.
+        priority: 0
+        value: "krb5srv:m:tcp:ldap1.example.com."
+        weight: 100
+      - name: _kpasswd.example.com.
+        priority: 0
+        value: "krb5srv:m:udp:ldap1.example.com."
+        weight: 100
   - dns_zone_forwarders:
       - 1.1.1.1
       - 8.8.8.8
     name: forwarded.example.com
     type: forward
+
+# secondary configuration example:
+#
+# on the main dns server:
+#
+# dns_options_allow_transfer:
+#   - "192.168.0.100"
+#
+# on the secondary dns server:
+#
+# dns_zones:
+#   - name: "example.com"
+#     type: secondary
+#     zone_masters:
+#       - 192.168.0.53
+#   - name: "lab.controlplane.info"
+#     type: secondary
+#     zone_masters:
+#       - 192.168.0.53
 ```
 
 ## [Requirements](#requirements)
@@ -142,15 +235,14 @@ Here is an overview of related roles:
 
 ## [Compatibility](#compatibility)
 
-This role has been tested on these [container images](https://hub.docker.com/u/robertdebock):
+This role has been tested on these [container images](https://hub.docker.com/u/buluma):
 
 |container|tags|
 |---------|----|
-|[Alpine](https://hub.docker.com/r/robertdebock/alpine)|all|
-|[EL](https://hub.docker.com/r/robertdebock/enterpriselinux)|all|
-|[Debian](https://hub.docker.com/r/robertdebock/debian)|all|
-|[Fedora](https://hub.docker.com/r/robertdebock/fedora)|all|
-|[Ubuntu](https://hub.docker.com/r/robertdebock/ubuntu)|all|
+|[EL](https://hub.docker.com/r/buluma/docker-molecule-images)|all|
+|[Debian](https://hub.docker.com/r/buluma/docker-molecule-images)|all|
+|[Fedora](https://hub.docker.com/r/buluma/docker-molecule-images)|all|
+|[Ubuntu](https://hub.docker.com/r/buluma/docker-molecule-images)|all|
 
 The minimum version of Ansible required is 2.12, tests have been done on:
 
@@ -168,6 +260,3 @@ If you find issues, please register them on [GitHub](https://github.com/buluma/a
 
 [buluma](https://buluma.github.io/)
 
-### Get Help
-- Report issues: https://github.com/buluma/ansible-role-dns/issues/new
-- See docs: https://docs.ansible.com/collection/gallery/ansible-role-dns
